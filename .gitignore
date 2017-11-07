@@ -1,6 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
-.gitignore
-.idea/
-MyLibrary.iml
-mylib/libs/
-mylib/src/main/res/drawable/
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild

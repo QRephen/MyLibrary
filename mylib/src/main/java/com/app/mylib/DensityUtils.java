@@ -1,4 +1,7 @@
-package com.app.mylibrary;
+package com.app.mylib;
+
+import android.content.Context;
+import android.util.TypedValue;
 
 /**
  * @author: QiuRuiFeng
@@ -8,19 +11,8 @@ package com.app.mylibrary;
  * @date: 2017/11/7
  */
 
-import android.content.Context;
-import android.util.TypedValue;
-
-/**
- * 常用单位转换的辅助类
- *
- *
- *
- */
-public class DensityUtils
-{
-    private DensityUtils()
-    {
+public class DensityUtils {
+    private DensityUtils() {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
     }
@@ -32,8 +24,7 @@ public class DensityUtils
      * @param val
      * @return
      */
-    public static int dp2px(Context context, float dpVal)
-    {
+    public static int dp2px(Context context, float dpVal) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 dpVal, context.getResources().getDisplayMetrics());
     }
@@ -45,8 +36,7 @@ public class DensityUtils
      * @param val
      * @return
      */
-    public static int sp2px(Context context, float spVal)
-    {
+    public static int sp2px(Context context, float spVal) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 spVal, context.getResources().getDisplayMetrics());
     }
@@ -58,8 +48,7 @@ public class DensityUtils
      * @param pxVal
      * @return
      */
-    public static float px2dp(Context context, float pxVal)
-    {
+    public static float px2dp(Context context, float pxVal) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (pxVal / scale);
     }
@@ -71,9 +60,7 @@ public class DensityUtils
      * @param pxVal
      * @return
      */
-    public static float px2sp(Context context, float pxVal)
-    {
+    public static float px2sp(Context context, float pxVal) {
         return (pxVal / context.getResources().getDisplayMetrics().scaledDensity);
     }
-
 }
